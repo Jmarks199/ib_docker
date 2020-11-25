@@ -12,6 +12,7 @@ After you run the container, you need to wait 30 seconds before trying to connec
 ### Configuration
 1. Clone this repository onto your local machine.
 2. Review the settings in *config.ini* so you understand the behavior of the gateway and change if necessary.
+     * It is not required to change anything and the fields that are blank should remain so because they are set by the environment section of the yml files.
 3. Open a text editor and create a file called *tws_credentials.env* inside the context directory and insert the username and password you use to login to Interactive Brokers
      * Refer to the example file if necessary.
      * This is included in the .gitignore so it will not be pushed to your source control but your password is still stored as plain text on your local machine so take necessary precaution to protect this file.
