@@ -4,9 +4,9 @@ A Docker Container for the Interactive Brokers Gateway in a Headless Environment
 As of 11/25/2020 I did not see any other currently working examples of building a docker container for the IB Gateway on Github. In order to create run this Docker container you will need to have the Docker and Docker-Compose CLI components installed on your machine.
 
 ### Notes
-    * This will make the IB Gateway available on your local machine on port 4003 regardless of whether you run the container in paper or live mode.
-      * This implies you cannot run more than one container at a time. Although with minimal changes I suppose you could.
-    * After you run the container, you need to wait 30 seconds before trying to connect to port 4003 because this is the amount of time provided for the IB Gateway to start before the ports are forked inside the container.
+This will make the IB Gateway available on your local machine on port 4003 regardless of whether you run the container in paper or live mode.
+  * This implies you cannot run more than one container at a time. Although with minimal changes I suppose you could.
+After you run the container, you need to wait 30 seconds before trying to connect to port 4003 because this is the amount of time provided for the IB Gateway to start before the ports are forked inside the container.
 
 ### Configuration
 1. Clone this repository onto your local machine.
