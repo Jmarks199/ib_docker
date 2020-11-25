@@ -6,6 +6,7 @@ As of 11/25/2020 I did not see any other currently working examples of building 
 ### Notes
 This will make the IB Gateway available on your local machine on port 4003 regardless of whether you run the container in paper or live mode.
   * This implies you cannot run more than one container at a time. Although with minimal changes I suppose you could.
+
 After you run the container, you need to wait 30 seconds before trying to connect to port 4003 because this is the amount of time provided for the IB Gateway to start before the ports are forked inside the container.
 
 ### Configuration
