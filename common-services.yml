@@ -1,0 +1,21 @@
+tws:
+  build: ./
+  container_name: ib
+  ports:
+    - "4003:4003"
+    - "7462:7462"
+  environment:
+    # Variables pulled from /IBController/IBControllerGatewayStart.sh
+    - TWS_MAJOR_VRSN=978
+    - IBC_INI=/opt/ibc/config.ini
+    - TWOFA_TIMEOUT_ACTION=exit
+    - IBC_PATH=/opt/ibc
+    - TWS_PATH=/root/Jts
+    - TWS_SETTINGS_PATH=/root/Jts
+    - LOG_PATH=/opt/ibc/Logs
+    - FIXUSERID=
+    - FIXPASSWORD=
+    - JAVA_PATH=
+    - APP=GATEWAY
+  env_file:
+    - tws_credentials.env
