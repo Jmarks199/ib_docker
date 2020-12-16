@@ -1,6 +1,0 @@
-tws:
-  extends:
-    file: common-services.yml
-    service: tws
-  environment:
-    - TRADING_MODE=live

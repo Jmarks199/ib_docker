@@ -1,6 +1,9 @@
 tws:
-  extends:
-    file: common-services.yml
-    service: tws
+  build: ./
+  ports:
+    - "4003:4003"
+    - "7462:7462"
   environment:
     - TRADING_MODE=paper
+  env_file:
+    - tws_credentials.env

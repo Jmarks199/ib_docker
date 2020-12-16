@@ -1,0 +1,3 @@
+tws:
+  environment:
+    - TRADING_MODE=live

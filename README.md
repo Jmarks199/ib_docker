@@ -16,7 +16,7 @@ After you run the container, you need to wait 30 seconds before trying to connec
 3. Open a text editor and create a file called *tws_credentials.env* inside the context directory and insert the username and password you use to login to Interactive Brokers
      * Refer to the example file if necessary.
      * This is included in the .gitignore so it will not be pushed to your source control but your password is still stored as plain text on your local machine so take necessary precaution to protect this file.
-     * Note - i use the same ID and password for both live and paper, but you could create two .envs, remove the env_file section from *common-services.yml* and add the appropriate .env file to the env_file section in each *docker-compose* yml file.
+     * Note - i use the same ID and password for both live and paper, but you could create two .envs, and add the appropriate .env file to the env_file section in each yml file.
   
  ### To Build and Run
  Then, follow these steps to build a Docker Image and run the container.
@@ -24,7 +24,7 @@ After you run the container, you need to wait 30 seconds before trying to connec
  1. cd into the context directory (where the Dockerfile lives)
  2. Run `docker-compose build` in the console
  3. Run `docker-compose up` to start the container with *TRADING_MODE* set to paper. 
-     * To run the container with trading mode set to live run `docker-compose -f docker-compose-live.yml up` instead
+     * To run the container with trading mode set to live run `docker-compose -f docker-compose-live.yml -f prod.yml up` instead
  4. Connect to the IB Gateway from your local machine with `ipaddress="127.0.0.1", portid=4003`
      * Traditionally you can connect to IB Gateway locally by specifying `ipaddress=""`, however, this would not work for me.
  
