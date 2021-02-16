@@ -1,3 +1,4 @@
-tws:
-  environment:
-    - TRADING_MODE=live
+services:
+  tws:
+    environment:
+      - TRADING_MODE=live

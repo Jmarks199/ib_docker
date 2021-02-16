@@ -9,5 +9,5 @@ DISPLAY=:0 /opt/ibc/scripts/displaybannerandlaunch.sh &
 sleep 30
 echo "Forking :::4001 onto 0.0.0.0:4003\n"
 socat TCP-LISTEN:4003,fork TCP:127.0.0.1:4001
-
+#socat TCP-LISTEN:4003,fork TCP:0.0.0.0:4001
 # todo add await signal feature - https://www.linuxjournal.com/content/bash-trap-command
